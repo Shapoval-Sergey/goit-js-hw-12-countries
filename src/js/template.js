@@ -1,8 +1,8 @@
-import items from '../templates/gallery-items.hbs';
-import dish from '../menu.json';
-import '../styles.css';
+import country from '../templates/gallery-country.hbs';
+// import dish from '../menu.json';
+// import '../styles.css';
 
-const menuRef = document.querySelector('.js-menu');
+const menuRef = document.querySelector('.list-countries');
 
-const markup = items(dish);
+const markup = country(dish);
 menuRef.insertAdjacentHTML('beforeend', markup);
