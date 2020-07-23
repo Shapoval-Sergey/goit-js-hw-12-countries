@@ -5,9 +5,10 @@
     <article>
         <p>Capital: {{capital}}</p>
         <p>Population: {{population}}</p>
+        <p>Languages: </p>
         <ul>
           {{#each languages}}
-            <li class="tag-list__item">{{this}}</li>
+            <li class="tag-list__item">{{this.name}}</li>
           {{/each}}
         </ul>
     </article>
