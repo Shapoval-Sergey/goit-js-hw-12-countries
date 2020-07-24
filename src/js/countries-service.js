@@ -1,1 +1,0 @@
-// import handlerInputText from '../index';
