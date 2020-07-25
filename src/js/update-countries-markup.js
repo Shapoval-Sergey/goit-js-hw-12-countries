@@ -1,6 +1,7 @@
 import country from '../templates/gallery-country.hbs';
 import arrCountries from '../templates/list-countries.hbs';
 import refs from './refs';
+import errorMessage from './notifications';
 
 function updateCountriesMarkup(data) {
   let markup;
@@ -11,6 +12,10 @@ function updateCountriesMarkup(data) {
     markup = arrCountries(data);
   }
   refs.list.insertAdjacentHTML('beforeend', markup);
+  if (data.length > 10) {
+    errorMessage();
+    return;
+  }
 }
 
 export default updateCountriesMarkup;

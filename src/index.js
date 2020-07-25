@@ -8,6 +8,9 @@ import './styles.css';
 const debounceInputHandler = debounce(event => {
   const inputValue = event.target.value;
   refs.list.innerHTML = '';
+  if (!inputValue) {
+    return;
+  }
   fetchCountries(inputValue).then(updateCountriesMarkup);
 }, 500);
 
