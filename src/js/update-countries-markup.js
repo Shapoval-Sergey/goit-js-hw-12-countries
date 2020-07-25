@@ -11,11 +11,11 @@ function updateCountriesMarkup(data) {
   if (data.length >= 2 && data.length <= 10) {
     markup = arrCountries(data);
   }
-  refs.list.insertAdjacentHTML('beforeend', markup);
   if (data.length > 10) {
     errorMessage();
     return;
   }
+  refs.list.insertAdjacentHTML('beforeend', markup);
 }
 
 export default updateCountriesMarkup;
